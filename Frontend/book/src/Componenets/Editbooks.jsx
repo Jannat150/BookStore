@@ -16,7 +16,7 @@ const EditBooks = () => {
   });
 
   useEffect(() => {
-    fetch(`http://localhost:8000/all-books`)
+    fetch(`https://bookstore-p7o2.onrender.com/all-books`)
       .then(res => res.json())
       .then(data => {
         const foundBook = data.find(b => b._id === id);
@@ -32,7 +32,7 @@ const EditBooks = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    fetch(`http://localhost:8000/book/${id}`, {
+    fetch(`https://bookstore-p7o2.onrender.com/book/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

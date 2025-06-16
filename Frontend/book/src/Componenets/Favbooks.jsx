@@ -5,7 +5,7 @@ const FavBooks = () => {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/all-books')
+    fetch('https://bookstore-p7o2.onrender.com/all-books')
       .then(res => res.json())
       .then(data => {
         // Sort books by title alphabetically for consistent display

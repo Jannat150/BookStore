@@ -22,7 +22,7 @@ const Uploads = () => {
       price
     }
     console.log(Object);
-    fetch("http://localhost:8000/uploads-book",{
+    fetch("https://bookstore-p7o2.onrender.com/uploads-book",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"

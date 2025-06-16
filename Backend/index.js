@@ -7,7 +7,12 @@ const { MongoClient, ObjectId } = require('mongodb');
 const mongoURL = process.env.mongoURL;
 const client = new MongoClient(mongoURL);
 
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173'], 
+  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+  credentials: true
+}));
+
 app.use(express.json());
 
 let database;
