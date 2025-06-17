@@ -8,7 +8,7 @@ const mongoURL = process.env.mongoURL;
 const client = new MongoClient(mongoURL);
 
 app.use(cors({
-  origin: ['http://localhost:5173','https://jannat-bookstore-842807.netlify.app'], 
+  origin: ['http://localhost:5173','https://jannat-bookstore.netlify.app'], 
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   credentials: true
 }));
